@@ -103,4 +103,23 @@ class Person {
     }
     // console.log(lilMan)
 
+    class Dinner {
+        constructor(appetizer, entree, dessert) {
+            this.appetizer = appetizer
+            this.entree = entree
+            this.dessert = dessert
+        }
+    }
     
+    class Chef {
+        getDinner (appetizer, entree, dessert) {
+            return new Dinner (appetizer, entree, dessert)
+
+        }
+        
+    }
+    const myDawg = new Chef 
+    console.log(myDawg.getDinner("Cheese sticks", "wings", "ice cream"))
+    console.log(myDawg.getDinner("Pizza", "fries", "brownie"))
+    console.log(myDawg.getDinner("Macaroni", "tatter tots", "Chocolate chip"))
+
