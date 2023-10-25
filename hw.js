@@ -5,21 +5,21 @@ class Hamster {
         this.price = price
     }
         wheelrun() {
-        console.log("squeak squeak!");
+        // console.log("squeak squeak!");
        }
        hide() {
-       console.log("scurry away");
+    //    console.log("scurry away");
        }  
        eatfood() {
-        console.log("yum yum")
+        // console.log("yum yum")
        }   
        getPrice() {
        return this.price
        } 
    }
    const lilBro = new Hamster ()
-   console.log(lilBro)
-   console.log(lilBro.getPrice())
+//    console.log(lilBro)
+//    console.log(lilBro.getPrice())
 //    lilBro.wheelrun()
 //    lilBro.hide()
 //    lilBro.eatfood()
@@ -28,37 +28,50 @@ class Hamster {
 
 
 class Person {
-    constructor(name, age, height, weight, mood, hamsters, bankaccount) {
+    constructor(name, age = 0, height = 0, weight = 0, mood = 0, hamsters = [], bankAccount = 0) {
         this.name = name
         this.age = age
         this.height = height
         this.weight = weight
         this.mood = mood
         this.hamsters = hamsters
-        this.bankaccount = bankaccount
+        this.bankAccount = bankAccount
     }
     getName() {
-        console.log("returns name");
+        return this.name
        }
        getAge() {
-       console.log("returns age");
+       return this.age;
        }  
-       getHeight() {
-        console.log("returns height")
+       getWeight() {
+        return this.weight
        }    
        greet() {
-        console.log()
+        console.log("Hello my name is "  +  this.name)
        }
        eat() {
-        console.log('delicious')
+        this.weight ++
+        this.mood ++
        }
        exercise() {
-
+        this.weight --
        }
        ageup() {
-
+        this.age ++
+        this.height ++
+        this.weight ++
+        this.mood --
+        this.bankAccount += 10
        }
-       buyHamster() {
-
+       buyHamster(hamster) {
+        this.mood += 10
+        this.bankAccount -= hamster.getPrice()
        }
-}
+}   
+    const bigBro = new Person ("john doe", 23, "six foot", 215, 4, [], 50)
+    // bigBro.eat()
+    // bigBro.greet()
+    // bigBro.ageup()
+    // console.log(bigBro)
+
+    
