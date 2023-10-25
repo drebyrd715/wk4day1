@@ -56,7 +56,7 @@ class Person {
        exercise() {
         this.weight --
        }
-       ageup() {
+       ageUp() {
         this.age ++
         this.height ++
         this.weight ++
@@ -66,12 +66,41 @@ class Person {
        buyHamster(hamster) {
         this.mood += 10
         this.bankAccount -= hamster.getPrice()
+        this.hamsters.push(hamster)
        }
 }   
-    const bigBro = new Person ("john doe", 23, "six foot", 215, 4, [], 50)
+    const bigBro = new Person ("john doe", 23, 6, 215, 4, [], 50)
     // bigBro.eat()
     // bigBro.greet()
-    // bigBro.ageup()
+    // bigBro.ageUp()
     // console.log(bigBro)
+
+    const lilMan = new Person ("Timmy", 5)
+    for (i = 0; i < 5; i++) {
+        lilMan.eat();
+    }
+    for (i = 0; i < 5; i++) {
+        lilMan.exercise();
+    }
+    for (i = 0; i < 9; i++) {
+        lilMan.ageUp(); 
+    }
+    // console.log(lilMan)
+
+    const Macaroni = new Hamster ("Gus", "Timmy")
+    lilMan.buyHamster(Macaroni)
+    // console.log(Macaroni)
+    // console.log(lilMan)
+
+    for (i = 0; i < 15; i++) {
+        lilMan.ageUp();
+    }
+    for (i = 0; i < 2; i++) {
+        lilMan.eat();
+    }
+    for (i = 0; i < 2; i++) {
+        lilMan.exercise();
+    }
+    // console.log(lilMan)
 
     
